@@ -1,0 +1,31 @@
+#root {
+  max-width: 1280px;
+  padding: 2rem;
+  text-align: center;
+  background-color: burlywood;
+}
+
+.container {
+  display: flex;
+}
+
+.container > div {
+  flex: 1;
+  padding: 1rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:1rem;
+}
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
