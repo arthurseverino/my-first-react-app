@@ -6,22 +6,12 @@ import Resume from './Resume.jsx';
 import './App.css';
 
 function App() {
-  // contact information states
-  const [name, setName] = useState('Name');
+  // the initial state is for the resume, the second is for the contact info
+  const [name, setName] = useState('Nameeee');
   const [email, setEmail] = useState('Email');
   const [phone, setPhone] = useState('Phone');
   const [status, setStatus] = useState('pending');
 
-  // contact information setters
-  const setNameChange = (value) => {
-    setName(value);
-  };
-  const setEmailChange = (value) => {
-    setEmail(value);
-  };
-  const setPhoneChange = (value) => {
-    setPhone(value);
-  };
   const submitSetter = () => {
     if (status == 'pending') {
       setStatus('submitted');
@@ -38,11 +28,13 @@ function App() {
       <div className="container">
         <div className="left">
           <Information
-            nameState={name}
-            emailState={setEmailChange}
-            phoneState={setPhoneChange}
-            statusState={status}
-            submitSetter={submitSetter}
+            // its passing in the setName function into Information
+            // so every time submit is pressed, nameProp is updated to the current new name
+            nameProp={setName}
+            emailProp={setEmail}
+            phoneProp={setPhone}
+            statusProp={status}
+            submitSetterProp={submitSetter}
           />
           <Education />
           <Experience />
