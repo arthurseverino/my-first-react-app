@@ -10,7 +10,7 @@ function App() {
   // the second set function is used to render the contact info with
   // the updated value from Information component(if it changed at all)
   const [status, setStatus] = useState('pending');
-  const [name, setName] = useState('Nameeee');
+  const [name, setName] = useState('Name');
   const [email, setEmail] = useState('Email');
   const [phone, setPhone] = useState('Phone');
   const submitSetter = () => {
