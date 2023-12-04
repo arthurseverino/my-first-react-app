@@ -15,6 +15,7 @@ export default function Information({
 
   function handleSubmit(event) {
     event.preventDefault();
+    //this is equal to setName(nameInfo)
     nameProp(nameInfo);
     emailProp(emailInfo);
     phoneProp(phoneInfo);

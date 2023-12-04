@@ -1,4 +1,4 @@
-export default function Resume({name, email, phone}) {
+export default function Resume({name, email, phone, school, degree, startDate, endDate, company, jobTitle, startDateExp, endDateExp}) {
   return (
     <>
       <h1>Resume</h1>
@@ -8,19 +8,21 @@ export default function Resume({name, email, phone}) {
         <p>{email}</p>
         <p>{phone}</p>
       </div>
+
       <div className="education">
         <h2>Education</h2>
-        <p>School Name: </p>
-        <p>Degree: </p>
-        <p>Start Date: </p>
-        <p>End Date: </p>
+        <p>{school} </p>
+        <p>{degree}</p>
+        <p>{startDate} -</p>
+        <p>{endDate} </p>
       </div>
+
       <div className="experience">
         <h2>Experience</h2>
-        <p>Company Name: </p>
-        <p>Job Title: </p>
-        <p>Start Date: </p>
-        <p>End Date: </p>
+        <p>{company} </p>
+        <p>{jobTitle}</p>
+        <p>{startDateExp}</p>
+        <p>{endDateExp}</p>
       </div>
     </>
   );
